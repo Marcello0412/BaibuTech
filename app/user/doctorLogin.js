@@ -84,6 +84,7 @@ class DoctorLogin extends Component {
               this.setState({username:text}, () => {
                 this._changeText();
               })
+              
             }}
             autoCapitalize='none'
             autoCorrect={false}
