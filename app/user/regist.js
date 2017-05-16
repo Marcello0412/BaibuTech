@@ -4,11 +4,13 @@ import {
   Text,
   View,
   TextInput,
-  Button
+  TouchableHighlight,
+  Image
 } from 'react-native';
 
-import Header from '../common/header'
 
+
+let usernameRg, passwordRg
 
 class Regist extends Component {
   constructor (props) {
@@ -19,10 +21,22 @@ class Regist extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header title='注册账号' bgColor='#8FBC8F' />
-        <View style={styles.body}>
-          <Text>注册</Text>
-        </View>
+        <TouchableHighlight onPress={this._onPressButton}>
+          <Image
+            style={styles.button}
+            source={require('./bt.jpeg')}
+          >
+            <Text>我是群众</Text>
+          </Image>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={this._onPressButton}>
+          <Image
+            style={styles.button}
+            source={require('./bt.jpeg')}
+          >
+            <Text>我是医生</Text>
+          </Image>
+        </TouchableHighlight>
       </View>
     )
   }
@@ -32,10 +46,6 @@ class Regist extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF'
-  },
-  body:{
     flex: 1
   }
 })

@@ -7,11 +7,10 @@ import {
 import Header from '../common/header'
 
 
-class Chat extends Component {
+class Inform extends Component {
   render(){
     return(
       <View style={styles.container}>
-        <Header title='转诊消息' />
         <View style={styles.body}>
 
         </View>
@@ -31,4 +30,4 @@ const styles = StyleSheet.create({
 })
 
 
-module.exports = Chat
+module.exports = Inform

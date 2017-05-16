@@ -11,7 +11,6 @@ class Custom extends Component {
   render(){
     return(
       <View style={styles.container}>
-        <Header title='签约群众' />
         <View style={styles.body}>
 
         </View>

@@ -21,7 +21,7 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    paddingTop: 25,
+    paddingTop: 30,
     paddingBottom: 12,
     backgroundColor: '#3CB371'
   },

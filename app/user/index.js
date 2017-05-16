@@ -2,24 +2,40 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Image,
+  TouchableHighlight
 } from 'react-native';
-import Header from '../common/header'
 
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 class User extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       pageTitle: ''
     }
   }
+
   render() {
     return (
       <View style={styles.container}>
-        <Header title='个人中心' />
-        <View style={styles.body}>
-
+        <View style={styles.header}>
+          <TouchableHighlight
+            style={styles.avatarBox}>
+            <Image
+              style={styles.avatar}
+              source={{uri: this.props.user.avatar}}
+            />
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={styles.certifiedBox}>
+            <View style={styles.certified}>
+              <Text style={styles.certifiedText}>未认证</Text>
+              <Icon name="vimeo" style={styles.certifiedIcon}/>
+              <Icon name="angle-right" style={styles.certifiedIcon}/>
+            </View>
+          </TouchableHighlight>
         </View>
       </View>
     )
@@ -27,14 +43,29 @@ class User extends Component {
 }
 
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFF'
   },
-  body:{
-    flex: 1
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+    borderBottomWidth: 1
+  },
+  certifiedBox: {},
+  certified: {
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    alignItems: 'center',
+  },
+  avatar: {
+    width: 64,
+    height: 64,
+    borderRadius: 5
   }
 })
 

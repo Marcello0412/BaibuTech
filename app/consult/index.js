@@ -14,7 +14,6 @@ class List extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header title='咨询列表' />
         <View style={styles.body}>
 
         </View>
